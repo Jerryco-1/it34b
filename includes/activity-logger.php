@@ -8,7 +8,6 @@
             if(strops($ip,',') !== false){
                 $ip = trim(explode(',', $ip)[0]);
 
-
             }
 
             //Get user agent (browser)

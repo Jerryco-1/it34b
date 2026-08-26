@@ -11,4 +11,4 @@ if ($success) {
 } else {
     echo "Failed to insert activity log.";
 }
-?>
+?>  

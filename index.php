@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if ($login==='' || $password ===''){
 
         // Log incomplete login attempt
-        logActivity
+        logActivity($pdo, null, $login, 'login', 'failed');
 
     } else {
 

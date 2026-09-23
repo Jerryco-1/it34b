@@ -1,7 +1,15 @@
-<h1>CREATED BY ARAES</h1>
+
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">
+        RENE GAY 
+    </h1>
+
 <?php
 require '../../config/config.php';
-require '../../config/functions.php';
 
 requireRole('admin');
 
@@ -33,7 +41,7 @@ $activities = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h1>Welcome Admin</h1>
-    <a href="../../auth/signout.php">Sign Out</a>
+    
     <table border="1">
         <thead>
             <tr>
@@ -64,3 +72,5 @@ $activities = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </table>
 </body>
 </html>
+
+<h1><a href="../../auth/signout.php">Sign Out</a></h1>

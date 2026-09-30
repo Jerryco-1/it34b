@@ -1,9 +1,9 @@
 <?php
 
-function loginUser($pdo, $login, $password)
-{
+function loginUser($pdo, $login, $password){
+    #Query 2
     $sql = "
-        SELECT 
+        SELECT
             user_id,
             user_email,
             user_username,
@@ -28,15 +28,19 @@ function loginUser($pdo, $login, $password)
         return false;
     }
 
+    // Check if suer already has an active session
+    if(hasActiveUserSession($pdo,$user['user_id'])){
+        return 'active_session';
+    }
+
     $_SESSION['user_id'] = $user['user_id'];
-    $_SESSION['user_email'] = $user['user_email'];
-    $_SESSION['user_username'] = $user['user_username'];
-    $_SESSION['user_role'] = $user['user_role'];
+$_SESSION['user_email'] = $user['user_email'];
+$_SESSION['user_username'] = $user['user_username'];
+$_SESSION['user_role'] = $user['user_role'];
 
-    $_SESSION['session_id'] = startUserSession($pdo);
+$_SESSION['session_id'] = startUserSession($pdo);
 
-
-    return true;
+return true;
 }
 
 function requireLogin()

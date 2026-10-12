@@ -2,7 +2,10 @@
 
 session_start();
 
-require_once __DIR__ . '/../includes/activity-logger.php';
+require_once __DIR__ . '/../functions/activity.php';
+require_once __DIR__ . '/../functions/auth.php';
+require_once __DIR__ . '/../functions/redirect.php';
+require_once __DIR__ . '/../functions/session.php';
 
 define('BASE_URL', 'http://localhost/it34b');
 
@@ -21,8 +24,6 @@ try {
     );
 
 } catch (PDOException $e) {
-
     die("Connection failed: " . $e->getMessage());
-
 }
 ?>

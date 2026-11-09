@@ -42,7 +42,6 @@ function logActivity($pdo, $user_id, $user_email, $action, $status = 'success')
             $ip,
             $user_agent
         ]);
-        return $successs;
 
     } catch (PDOException $e) {
 

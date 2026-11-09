@@ -42,6 +42,7 @@ if ($section === 'activity-logs'){
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
@@ -51,6 +52,7 @@ if ($section === 'activity-logs'){
        
    
 </head>
+
 <body>
         <h1>Welcome, Admin!</h1>
 
